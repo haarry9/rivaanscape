@@ -1,0 +1,53 @@
+/* src/app/blog-styles.css */
+
+/* Basic styles for code blocks */
+pre {
+  background-color: #f6f8fa; /* Light theme background */
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  font-family: 'Fira Code', 'Courier New', monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Dark mode styles for code blocks */
+.dark pre {
+  background-color: #1e1e1e; /* Dark theme background */
+}
+
+/* Shiki will add inline styles for token colors,
+   but we can style the container and line elements. */
+
+pre [data-line] {
+  padding: 0 1rem;
+}
+
+pre [data-highlighted-line] {
+  background-color: rgba(255, 255, 0, 0.1);
+}
+
+/* Styles for the blog layout */
+.blog-content {
+  /* Add styles for the main content area if needed */
+}
+
+.toc {
+  /* Styles for the Table of Contents */
+  position: sticky;
+  top: 6rem; /* Adjust as needed */
+  align-self: start;
+  max-height: calc(100vh - 8rem);
+  overflow-y: auto;
+}
+
+.toc ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.toc li {
+  margin-bottom: 0.5rem;
+}
+
+/* Removed old .toc a styles since we're using inline classes now */ 
