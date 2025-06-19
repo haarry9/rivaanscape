@@ -1,28 +1,31 @@
 import Link from 'next/link'
-import { Separator } from '../ui/separator'
-import { ArrowUpRight } from 'lucide-react'
 
 export const Intro = () => {
   return (
     <section className="mt-8 text-zinc-600 dark:text-zinc-400">
       <div className="space-y-5 text-left">
-
         <p>
-        👋 Hi there! I&apos;m Harishankar P V, an AI Engineer from India, who loves {' '}
-        <span className="bg-gradient-to-l from-purple-400 to-yellow-400 bg-clip-text text-transparent">
-          building and shipping AI products!
-          </span> 
-        {' '}
+          👋 Hi there! I&apos;m Harishankar P V, an AI Engineer from India, who
+          loves{' '}
+          <span className="bg-gradient-to-l from-purple-400 to-yellow-400 bg-clip-text text-transparent">
+            building and shipping AI products!
+          </span>{' '}
         </p>
 
         <p>
-       I can manage the entire AI development process and am adept at integrating AI and building AI-powered products 
-       that make an impact. My goal is to create AI-driven solutions that are natural and intuitive, letting the technology work its 
-        magic behind the scenes.
-
+          As you know when it comes to building AI products, you need Engineers!
+          I can manage the entire AI development process, be it integrating
+          frontend and backend with AI APIs, RAGs or AI Agents and the part that
+          excites me the most about AI Engineering is working with tools like
+          CursorAI and seeing the vision of the product come alive.
         </p>
         <p>
-        I enjoy riding the AI wave and exploring new technologies to enhance my skills 🚀
+          My goal is to create AI-driven solutions that are natural and
+          intuitive, letting the technology work its magic behind the scenes.
+        </p>
+        <p>
+          I enjoy riding the AI wave and exploring new technologies to enhance
+          my skills 🚀
         </p>
 
         {/* <p>

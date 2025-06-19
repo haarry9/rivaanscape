@@ -1,7 +1,6 @@
 import Image from 'next/image'
 
 async function VideoComponent({
-  fileName,
   title,
   imageSrc,
 }: {

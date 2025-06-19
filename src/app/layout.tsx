@@ -1,13 +1,10 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import '@/app/globals.css'
 import { Toaster } from '@/components/ui/sonner'
 import React from 'react'
 import { Providers } from './Providers'
 import { cath, lombok, neu } from '@/lib/font'
 import { Analytics } from '@/components/shared/Analytics'
-
-const inter = Inter({ subsets: ['latin'] })
 
 const info = {
   name: 'Harishankar P V',
@@ -51,7 +48,7 @@ export default function RootLayout({ children }: ChildrenProps) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${neu.variable} ${inter.className} ${cath.variable} ${lombok.variable}`}
+        className={`${neu.variable} ${cath.variable} ${lombok.variable} font-sans`}
       >
         <Providers>
           <div className="relative dark:bg-black">{children}</div>

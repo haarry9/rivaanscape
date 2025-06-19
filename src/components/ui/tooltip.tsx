@@ -1,7 +1,7 @@
-"use client"
+'use client'
 
-import * as React from "react"
-import { cn } from "@/lib/utils"
+import * as React from 'react'
+import { cn } from '@/lib/utils'
 
 interface TooltipProps {
   children: React.ReactNode
@@ -11,7 +11,7 @@ interface TooltipProps {
 
 const Tooltip = ({ children, content, className }: TooltipProps) => {
   const [isVisible, setIsVisible] = React.useState(false)
-  const timeoutRef = React.useRef<NodeJS.Timeout | null>(null)
+  const timeoutRef = React.useRef<ReturnType<typeof setTimeout> | null>(null)
 
   const showTooltip = () => {
     if (timeoutRef.current) {
@@ -61,8 +61,8 @@ const Tooltip = ({ children, content, className }: TooltipProps) => {
       {isVisible && (
         <div
           className={cn(
-            "fixed z-[9999] whitespace-nowrap rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white shadow-xl dark:bg-gray-700",
-            "animate-in fade-in-0 zoom-in-95 duration-200",
+            'fixed z-[9999] whitespace-nowrap rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white shadow-xl dark:bg-gray-700',
+            'duration-200 animate-in fade-in-0 zoom-in-95',
             className
           )}
           style={{
@@ -70,7 +70,7 @@ const Tooltip = ({ children, content, className }: TooltipProps) => {
             top: '20px',
             left: '50%',
             transform: 'translateX(-50%)',
-            zIndex: 9999
+            zIndex: 9999,
           }}
           onMouseEnter={handleTooltipMouseEnter}
           onMouseLeave={handleTooltipMouseLeave}
@@ -82,4 +82,4 @@ const Tooltip = ({ children, content, className }: TooltipProps) => {
   )
 }
 
-export { Tooltip } 
+export { Tooltip }

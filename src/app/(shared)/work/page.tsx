@@ -26,8 +26,8 @@ export default function WorkPage() {
       <div className="space-y-5">
         {' '}
         <p>
-         I enjoy riding the AI wave and exploring new technologies to enhance my skills 
-          while continuously learning and growing as an AI Engineer 🚀
+          I enjoy riding the AI wave and exploring new technologies to enhance
+          my skills while continuously learning and growing as an AI Engineer 🚀
         </p>
         <p>Here &apos;s a snapshot of my journey so far.</p>
       </div>
@@ -41,7 +41,9 @@ export default function WorkPage() {
             target="_blank"
             className="group flex items-center justify-start gap-3 overflow-hidden"
           >
-            <h2 className="text-2xl font-semibold">Misogi AI by Masai School .</h2>
+            <h2 className="text-2xl font-semibold">
+              Misogi AI by Masai School .
+            </h2>
 
             <div className="relative size-5 -translate-x-4 -translate-y-1 overflow-hidden">
               <ArrowUpRight className="size-5 transition-all duration-300 ease-in-out group-hover:-translate-y-full group-hover:translate-x-full" />
@@ -49,28 +51,41 @@ export default function WorkPage() {
             </div>
           </Link>
           <p className="text-sm text-neutral-600 dark:text-neutral-400">
-          AI Engineer | June &apos;2 - September &apos;8
+            AI Engineer | June &apos;2 - September &apos;8
           </p>
         </div>
 
         <p className="leading-relaxed">
-        Selected into Misogi AI, a rigorous 14-week AI Engineering sprint blending remote and onsite training 
-        (80–100 hrs/week), focused on mastering LLMs, agentic architectures, and full-stack AI-first applications.:
+          Selected into Misogi AI, a rigorous 14-week AI Engineering sprint
+          blending remote and onsite training (80–100 hrs/week), focused on
+          mastering LLMs, agentic architectures, and full-stack AI-first
+          applications.:
         </p>
         <ul className="list-inside list-disc space-y-2 leading-relaxed">
-          <li>Engineered end-to-end AI systems: from building LLM-based apps with OpenAI APIs to integrating agentic workflows using LangChain, LangGraph, and OpenAI Assistants.</li>
           <li>
-          Developed RAG (Retrieval Augmented Generation) pipelines using GraphRAG, vector databases (e.g., Chroma, Weaviate), chunking strategies, and semantic search evaluation metrics.
+            Engineered end-to-end AI systems: from building LLM-based apps with
+            OpenAI APIs to integrating agentic workflows using LangChain,
+            LangGraph, and OpenAI Assistants.
           </li>
           <li>
-          Created and deployed multi-agent systems with CrewAI, Swarm, and MCP, showcasing real-world mobile-first AI apps on iOS/Android.
+            Developed RAG (Retrieval Augmented Generation) pipelines using
+            GraphRAG, vector databases (e.g., Chroma, Weaviate), chunking
+            strategies, and semantic search evaluation metrics.
           </li>
           <li>
-          Hands-on with open-source models via HuggingFace, Ollama, and local inference setups. Built performant pipelines leveraging lightweight models like LLaMA, Mistral, and finetuned via QLoRA, PEFT, and LoRA.
+            Created and deployed multi-agent systems with CrewAI, Swarm, and
+            MCP, showcasing real-world mobile-first AI apps on iOS/Android.
+          </li>
+          <li>
+            Hands-on with open-source models via HuggingFace, Ollama, and local
+            inference setups. Built performant pipelines leveraging lightweight
+            models like LLaMA, Mistral, and finetuned via QLoRA, PEFT, and LoRA.
           </li>
         </ul>
         <p className="mt-4 leading-relaxed">
-        This experience significantly strengthened my command over GenAI workflows, stateful agent architectures, LLM internals, and AI product development, aligning me with the future of AI engineering.
+          This experience significantly strengthened my command over GenAI
+          workflows, stateful agent architectures, LLM internals, and AI product
+          development, aligning me with the future of AI engineering.
         </p>
       </div>
 

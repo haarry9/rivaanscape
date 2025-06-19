@@ -1,7 +1,13 @@
 import Link from 'next/link'
 import { format } from 'date-fns'
 import { Badge } from '@/components/ui/badge'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card'
 import { Clock, Calendar, User } from 'lucide-react'
 
 interface BlogCardProps {
@@ -25,24 +31,24 @@ export function BlogCard({
   tags,
   readingTime,
   featured,
-  excerpt
+  excerpt,
 }: BlogCardProps) {
   return (
     <Link href={`/blog/${slug}`} className="group block">
-      <Card className="h-full transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1 border-border/50 hover:border-primary/20 bg-background/50 backdrop-blur-sm">
+      <Card className="h-full border-border/50 bg-background/50 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/20 hover:shadow-lg hover:shadow-primary/10">
         <CardHeader className="pb-3">
-          <div className="flex items-center justify-between mb-2">
+          <div className="mb-2 flex items-center justify-between">
             {featured && (
               <Badge variant="secondary" className="text-xs">
                 Featured
               </Badge>
             )}
             <div className="flex items-center text-xs text-muted-foreground">
-              <Calendar className="w-3 h-3 mr-1" />
+              <Calendar className="mr-1 size-3" />
               {format(new Date(date), 'MMM dd, yyyy')}
             </div>
           </div>
-          <CardTitle className="text-lg leading-tight group-hover:text-primary transition-colors duration-200">
+          <CardTitle className="text-lg leading-tight transition-colors duration-200 group-hover:text-primary">
             {title}
           </CardTitle>
           {description && (
@@ -53,35 +59,35 @@ export function BlogCard({
         </CardHeader>
         <CardContent className="pt-0">
           {excerpt && (
-            <p className="text-sm text-muted-foreground mb-4 line-clamp-2">
+            <p className="mb-4 line-clamp-2 text-sm text-muted-foreground">
               {excerpt}
             </p>
           )}
-          
-          <div className="flex flex-wrap gap-1.5 mb-4">
+
+          <div className="mb-4 flex flex-wrap gap-1.5">
             {tags.slice(0, 3).map((tag) => (
-              <Badge 
-                key={tag} 
-                variant="outline" 
-                className="text-xs px-2 py-0.5 hover:bg-primary/10"
+              <Badge
+                key={tag}
+                variant="outline"
+                className="px-2 py-0.5 text-xs hover:bg-primary/10"
               >
                 {tag}
               </Badge>
             ))}
             {tags.length > 3 && (
-              <Badge variant="outline" className="text-xs px-2 py-0.5">
+              <Badge variant="outline" className="px-2 py-0.5 text-xs">
                 +{tags.length - 3}
               </Badge>
             )}
           </div>
-          
+
           <div className="flex items-center justify-between text-xs text-muted-foreground">
             <div className="flex items-center">
-              <User className="w-3 h-3 mr-1" />
+              <User className="mr-1 size-3" />
               {author}
             </div>
             <div className="flex items-center">
-              <Clock className="w-3 h-3 mr-1" />
+              <Clock className="mr-1 size-3" />
               {readingTime} min read
             </div>
           </div>
@@ -89,4 +95,4 @@ export function BlogCard({
       </Card>
     </Link>
   )
-} 
+}

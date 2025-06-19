@@ -64,4 +64,4 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
       <MDXRenderer code={post.content} />
     </BlogLayout>
   )
-} 
+}

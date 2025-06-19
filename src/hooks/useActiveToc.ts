@@ -16,14 +16,16 @@ export function useActiveToc(itemIds: string[]) {
     }
 
     observer.current = new IntersectionObserver(handleObserver, {
-      rootMargin: '-20% 0% -35% 0px'
+      rootMargin: '-20% 0% -35% 0px',
     })
 
-    const elements = itemIds.map((id) => document.getElementById(id)).filter(Boolean) as HTMLElement[]
+    const elements = itemIds
+      .map((id) => document.getElementById(id))
+      .filter(Boolean) as HTMLElement[]
     elements.forEach((elem) => observer.current?.observe(elem))
 
     return () => observer.current?.disconnect()
   }, [itemIds])
 
   return activeId
-} 
+}

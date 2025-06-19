@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import avatar from '../../../public/images/avatar.png'
+import avatar from '../../../public/images/hari.jpg'
 const AvatarHairpin = () => {
   return (
     <div className="relative order-first shrink p-4 md:order-last md:p-4">

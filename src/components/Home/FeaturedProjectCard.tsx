@@ -63,7 +63,11 @@ const FeaturedProjectCard: React.FC<FeaturedProjectCardProps> = ({
                   />
                 }
               >
-                <VideoComponent fileName={videoSrc} title={title} imageSrc={imageSrc} />
+                <VideoComponent
+                  fileName={videoSrc}
+                  title={title}
+                  imageSrc={imageSrc}
+                />
               </Suspense>
             ) : (
               <Image
@@ -81,14 +85,10 @@ const FeaturedProjectCard: React.FC<FeaturedProjectCardProps> = ({
 
       {/* Project Content */}
       <div className="space-y-3">
-        <h3 className="text-xl font-semibold dark:text-white">
-          {title}
-        </h3>
-        <p className="text-xs text-gray-800 dark:text-gray-50">
-          {timeline}
-        </p>
+        <h3 className="text-xl font-semibold dark:text-white">{title}</h3>
+        <p className="text-xs text-gray-800 dark:text-gray-50">{timeline}</p>
         <p className="text-sm dark:text-slate-300">{tagline}</p>
-        
+
         <div className="flex flex-wrap gap-2">
           {tags.map((tag, index) => (
             <div
@@ -99,7 +99,7 @@ const FeaturedProjectCard: React.FC<FeaturedProjectCardProps> = ({
             </div>
           ))}
         </div>
-        
+
         <div className="flex gap-4">
           <Link
             href={sourceCodeHref}
@@ -127,4 +127,4 @@ const FeaturedProjectCard: React.FC<FeaturedProjectCardProps> = ({
   )
 }
 
-export default FeaturedProjectCard 
+export default FeaturedProjectCard

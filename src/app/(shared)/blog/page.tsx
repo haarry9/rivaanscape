@@ -23,7 +23,8 @@ const Blog = () => {
         <h1 className="text-3xl font-bold tracking-tight">read my blogs</h1>
       </div>{' '}
       <p>
-        Exploring topics like AI Engineering, MLOps, and the latest in artificial intelligence.
+        Exploring topics like AI Engineering, MLOps, and the latest in
+        artificial intelligence.
       </p>
       <p>
         Stay updated on my learning journey—follow me on{' '}
@@ -35,7 +36,6 @@ const Blog = () => {
         </Link>{' '}
         for insights and updates!
       </p>
-
       {/* Blog Posts List */}
       {publishedPosts.length > 0 && (
         <div className="py-8">
@@ -58,7 +58,6 @@ const Blog = () => {
           </div>
         </div>
       )}
-
       {/* More Coming Soon Section */}
       <div className="flex items-center justify-center pt-32">
         {' '}

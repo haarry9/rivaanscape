@@ -14,7 +14,12 @@ export function MDXRenderer({ code }: MDXRendererProps) {
 
   useEffect(() => {
     async function run() {
-      const mod = await mdx.run(code, { Fragment, jsx, jsxs, baseUrl: import.meta.url })
+      const mod = await mdx.run(code, {
+        Fragment,
+        jsx,
+        jsxs,
+        baseUrl: import.meta.url,
+      })
       setMdxModule(mod)
     }
     run()
@@ -25,4 +30,4 @@ export function MDXRenderer({ code }: MDXRendererProps) {
   }
 
   return <mdxModule.default />
-} 
+}

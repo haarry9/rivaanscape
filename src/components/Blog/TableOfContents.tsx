@@ -23,19 +23,19 @@ interface TableOfContentsProps {
 // Function to flatten the hierarchical TOC structure
 function flattenToc(items: VeliteTocItem[], depth = 1): FlatTocItem[] {
   const flattened: FlatTocItem[] = []
-  
+
   for (const item of items) {
     flattened.push({
       url: item.url,
       text: item.title,
-      depth: depth
+      depth: depth,
     })
-    
+
     if (item.items && item.items.length > 0) {
       flattened.push(...flattenToc(item.items, depth + 1))
     }
   }
-  
+
   return flattened
 }
 
@@ -60,7 +60,7 @@ export function TableOfContents({ toc }: TableOfContentsProps) {
 
   return (
     <div className="toc">
-      <h3 className="font-semibold mb-4 text-foreground">On this page</h3>
+      <h3 className="mb-4 font-semibold text-foreground">On this page</h3>
       <ul className="space-y-2">
         {flatToc.map((item) => {
           const href = item.url
@@ -71,8 +71,8 @@ export function TableOfContents({ toc }: TableOfContentsProps) {
               <a
                 href={href}
                 className={`block text-sm transition-colors hover:text-foreground ${
-                  isActive 
-                    ? 'text-primary font-medium' 
+                  isActive
+                    ? 'font-medium text-primary'
                     : 'text-muted-foreground'
                 }`}
                 style={{ marginLeft: `${(item.depth - 1) * 1}rem` }}
@@ -85,4 +85,4 @@ export function TableOfContents({ toc }: TableOfContentsProps) {
       </ul>
     </div>
   )
-} 
+}

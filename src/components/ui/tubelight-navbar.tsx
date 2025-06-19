@@ -1,13 +1,13 @@
-"use client"
+'use client'
 
-import React, { useEffect, useState } from "react"
-import { motion } from "framer-motion"
-import Link from "next/link"
-import { usePathname } from "next/navigation"
-import { Home, Briefcase, FolderOpen, BookOpen, User } from "lucide-react"
-import { LucideIcon } from "lucide-react"
-import { cn } from "@/lib/utils"
-import Logo from "../Icons/Logo"
+import React, { useEffect, useState } from 'react'
+import { motion } from 'framer-motion'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import { Home, Briefcase, FolderOpen, BookOpen } from 'lucide-react'
+import { LucideIcon } from 'lucide-react'
+import { cn } from '@/lib/utils'
+import Logo from '../Icons/Logo'
 
 interface NavItem {
   name: string
@@ -30,36 +30,27 @@ const navItems: NavItem[] = [
 
 export function NavBar({ className }: NavBarProps) {
   const pathname = usePathname()
-  const [isMobile, setIsMobile] = useState(false)
-  
+
   // Find the active tab based on current pathname
-  const activeItem = navItems.find(item => pathname === item.href) || navItems[0]
+  const activeItem =
+    navItems.find((item) => pathname === item.href) || navItems[0]
   const [activeTab, setActiveTab] = useState(activeItem.name)
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768)
-    }
-
-    handleResize()
-    window.addEventListener("resize", handleResize)
-    return () => window.removeEventListener("resize", handleResize)
-  }, [])
 
   // Update active tab when pathname changes
   useEffect(() => {
-    const currentItem = navItems.find(item => pathname === item.href) || navItems[0]
+    const currentItem =
+      navItems.find((item) => pathname === item.href) || navItems[0]
     setActiveTab(currentItem.name)
   }, [pathname])
 
   return (
     <div
       className={cn(
-        "fixed top-0 left-1/2 -translate-x-1/2 z-50 pt-6",
-        className,
+        'fixed left-1/2 top-0 z-50 -translate-x-1/2 pt-6',
+        className
       )}
     >
-      <div className="flex items-center gap-6 bg-background/3 border border-border/30 backdrop-blur-lg py-3 px-3 rounded-full shadow-lg md:gap-8 md:py-4 md:px-6">
+      <div className="bg-background/3 flex items-center gap-6 rounded-full border border-border/30 p-3 shadow-lg backdrop-blur-lg md:gap-8 md:px-6 md:py-4">
         {navItems.map((item) => {
           const Icon = item.icon
           const isActive = activeTab === item.name
@@ -70,9 +61,9 @@ export function NavBar({ className }: NavBarProps) {
               href={item.href}
               onClick={() => setActiveTab(item.name)}
               className={cn(
-                "relative cursor-pointer text-sm font-semibold px-4 py-2 rounded-full transition-colors md:px-6 md:py-3",
-                "text-foreground/80 hover:text-primary",
-                isActive && "bg-muted text-primary",
+                'relative cursor-pointer rounded-full px-4 py-2 text-sm font-semibold transition-colors md:px-6 md:py-3',
+                'text-foreground/80 hover:text-primary',
+                isActive && 'bg-muted text-primary'
               )}
             >
               {item.name === 'Home' ? (
@@ -88,18 +79,18 @@ export function NavBar({ className }: NavBarProps) {
               {isActive && (
                 <motion.div
                   layoutId="lamp"
-                  className="absolute inset-0 w-full bg-primary/5 rounded-full -z-10"
+                  className="absolute inset-0 -z-10 w-full rounded-full bg-primary/5"
                   initial={false}
                   transition={{
-                    type: "spring",
+                    type: 'spring',
                     stiffness: 300,
                     damping: 30,
                   }}
                 >
-                  <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-8 h-1 bg-primary rounded-t-full">
-                    <div className="absolute w-12 h-6 bg-primary/20 rounded-full blur-md -top-2 -left-2" />
-                    <div className="absolute w-8 h-6 bg-primary/20 rounded-full blur-md -top-1" />
-                    <div className="absolute w-4 h-4 bg-primary/20 rounded-full blur-sm top-0 left-2" />
+                  <div className="absolute -top-2 left-1/2 h-1 w-8 -translate-x-1/2 rounded-t-full bg-primary">
+                    <div className="absolute -left-2 -top-2 h-6 w-12 rounded-full bg-primary/20 blur-md" />
+                    <div className="absolute -top-1 h-6 w-8 rounded-full bg-primary/20 blur-md" />
+                    <div className="absolute left-2 top-0 size-4 rounded-full bg-primary/20 blur-sm" />
                   </div>
                 </motion.div>
               )}
@@ -109,4 +100,4 @@ export function NavBar({ className }: NavBarProps) {
       </div>
     </div>
   )
-} 
+}

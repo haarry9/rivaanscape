@@ -49,8 +49,7 @@ const page = () => {
             (new Date().getTime() - new Date(1999, 12, 9).getTime()) /
               (365.25 * 24 * 60 * 60 * 1000)
           )}
-          -year-old AI Engineer from India. 
-
+          -year-old AI Engineer from India.
           {/* who thrives on crafting
           intuitive and dynamic <span className="text-teal-500">UIs</span>,
           especially with{' '}
@@ -63,17 +62,18 @@ const page = () => {
             Next.js
           </Link>
           . */}
-
         </p>
         <p>
-        I'm an engineer passionate about building AI-powered products that make an impact. 
-        I can manage the entire AI development process and am adept at integrating AI so seamlessly 
-        that it feels effortless to end users. My goal is to create AI-driven solutions that are 
-        natural and intuitive, letting the technology work its magic behind the scenes.
+          I&apos;m an engineer passionate about building AI-powered products
+          that make an impact. I can manage the entire AI development process
+          and am adept at integrating AI so seamlessly that it feels effortless
+          to end users. My goal is to create AI-driven solutions that are
+          natural and intuitive, letting the technology work its magic behind
+          the scenes.
         </p>
         <p>
-          I enjoy building robust AI applications and exploring new technologies to
-          enhance my skills.
+          I enjoy building robust AI applications and exploring new technologies
+          to enhance my skills.
         </p>
         {/* <p>
           Currently, I&apos;m diving into Web3, blockchain, and{' '}
@@ -169,7 +169,7 @@ const page = () => {
           to Polaroid images. Each font is uniquely styled to highlight its
           role.
         </p>
-        <div className="grid border-collapse grid-cols-1 place-items-center items-center border border-dashed border-emerald-900/60 md:grid-cols-2">
+        <div className="grid border-collapse grid-cols-1 place-items-center border border-dashed border-emerald-900/60 md:grid-cols-2">
           <p className="w-full border border-dashed border-emerald-900/60 p-4 text-center font-normal">
             Inter
           </p>

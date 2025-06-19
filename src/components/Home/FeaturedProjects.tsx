@@ -6,7 +6,7 @@ import FeaturedProjectCard from './FeaturedProjectCard'
 import BlurFade from '@/components/ui/BlurFade'
 
 const FeaturedProjects = () => {
-  const featuredProjects = topProjects.filter(project => project.featured)
+  const featuredProjects = topProjects.filter((project) => project.featured)
 
   return (
     <div className="w-full space-y-8">
@@ -16,14 +16,15 @@ const FeaturedProjects = () => {
             Selected Projects
           </h2>
         </BlurFade>
-        
+
         <BlurFade delay={0.4}>
           <p className="mx-auto max-w-2xl text-center text-sm text-gray-600 dark:text-gray-300 md:text-base">
-            I've worked on a variety of projects, from simple websites to complex web applications. Here are a few of my favorites.
+            I&apos;ve worked on a variety of projects, from simple websites to
+            complex web applications. Here are a few of my favorites.
           </p>
         </BlurFade>
       </div>
-      
+
       <div className="grid gap-8 md:grid-cols-2">
         {featuredProjects.map((project, index) => (
           <BlurFade key={project.title} delay={0.5 + index * 0.1}>
@@ -56,4 +57,4 @@ const FeaturedProjects = () => {
   )
 }
 
-export default FeaturedProjects 
+export default FeaturedProjects

@@ -67,7 +67,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                     />
                   }
                 >
-                  <VideoComponent fileName={videoSrc} title={title} imageSrc={imageSrc} />
+                  <VideoComponent
+                    fileName={videoSrc}
+                    title={title}
+                    imageSrc={imageSrc}
+                  />
                 </Suspense>
               ) : (
                 <Image

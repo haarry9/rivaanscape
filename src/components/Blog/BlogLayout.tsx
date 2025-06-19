@@ -35,14 +35,14 @@ export function BlogLayout({
   readingTime,
   children,
   image,
-  toc
+  toc,
 }: BlogLayoutProps) {
   return (
     <div className="min-h-screen bg-background">
       <div className="container mx-auto px-4 py-6">
         <Link href="/blog" className="mb-8 block">
           <Button variant="ghost" size="sm" className="-ml-2">
-            <ArrowLeft className="w-4 h-4 mr-2" />
+            <ArrowLeft className="mr-2 size-4" />
             Back to Blog
           </Button>
         </Link>
@@ -50,38 +50,38 @@ export function BlogLayout({
           <div className="lg:col-span-8">
             <header className="mb-12">
               {image && (
-                <div className="mb-8 rounded-lg overflow-hidden aspect-video">
+                <div className="mb-8 aspect-video overflow-hidden rounded-lg">
                   <Image
                     src={`/images/blogs/${image}`}
                     alt={title}
                     width={1200}
                     height={675}
-                    className="w-full h-full object-cover"
+                    className="size-full object-cover"
                     priority
                   />
                 </div>
               )}
-              <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4 text-foreground">
+              <h1 className="mb-4 text-4xl font-bold tracking-tight text-foreground md:text-5xl">
                 {title}
               </h1>
 
               {description && (
-                <p className="text-xl text-muted-foreground mb-6 leading-relaxed">
+                <p className="mb-6 text-xl leading-relaxed text-muted-foreground">
                   {description}
                 </p>
               )}
 
-              <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground mb-6">
+              <div className="mb-6 flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
                 <div className="flex items-center">
-                  <Calendar className="w-4 h-4 mr-2" />
+                  <Calendar className="mr-2 size-4" />
                   {format(new Date(date), 'MMMM dd, yyyy')}
                 </div>
                 <div className="flex items-center">
-                  <User className="w-4 h-4 mr-2" />
+                  <User className="mr-2 size-4" />
                   {author}
                 </div>
                 <div className="flex items-center">
-                  <Clock className="w-4 h-4 mr-2" />
+                  <Clock className="mr-2 size-4" />
                   {readingTime} min read
                 </div>
               </div>
@@ -94,26 +94,27 @@ export function BlogLayout({
                 ))}
               </div>
             </header>
-            <article className="prose prose-lg prose-neutral dark:prose-invert max-w-none">
+            <article className="prose prose-lg prose-neutral max-w-none dark:prose-invert">
               {children}
             </article>
           </div>
-          <aside className="hidden lg:block lg:col-span-4">
+          <aside className="hidden lg:col-span-4 lg:block">
             <TableOfContents toc={toc} />
           </aside>
         </div>
       </div>
-      <footer className="border-t border-border/40 mt-16">
+      <footer className="mt-16 border-t border-border/40">
         <div className="container mx-auto px-4 py-8">
           <div className="max-w-4xl">
             <hr className="mb-6 border-border" />
             <div className="flex items-center justify-between">
               <p className="text-sm text-muted-foreground">
-                Published on {format(new Date(date), 'MMMM dd, yyyy')} by {author}
+                Published on {format(new Date(date), 'MMMM dd, yyyy')} by{' '}
+                {author}
               </p>
               <Link href="/blog">
                 <Button variant="outline" size="sm">
-                  <ArrowLeft className="w-4 h-4 mr-2" />
+                  <ArrowLeft className="mr-2 size-4" />
                   Back to Blog
                 </Button>
               </Link>
@@ -123,4 +124,4 @@ export function BlogLayout({
       </footer>
     </div>
   )
-} 
+}
