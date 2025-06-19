@@ -40,7 +40,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-![Portfolio Screenshot](https://github.com/user-attachments/assets/979b65bb-4a01-4a4d-93bd-70287b414296)
+![Portfolio Screenshot](ui.png)
 
 Welcome to my personal portfolio! This is where I showcase my journey as an AI Engineer, featuring my projects, skills, and a bit about who I am. It's designed to provide an overview of my work in AI development and the products I've built.
 
@@ -59,7 +59,7 @@ I'm Harishankar P V, an AI Engineer from India who loves building and shipping A
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Inspiration
+<!-- ## Inspiration
 Thanks to all the sources of inspiration that guided and motivated me throughout the creation of this portfolio. Inspired by many, built by one.
 
 - [antfu.me](https://antfu.me/)
@@ -86,7 +86,7 @@ Thanks to all the sources of inspiration that guided and motivated me throughout
 - [samuelkraft.com](https://samuelkraft.com/)
 - [bentogrids](https://bentogrids.com/)
 - [hover.dev](https://www.hover.dev/)
-- [vocs.dev](https://vocs.dev/)
+- [vocs.dev](https://vocs.dev/) -->
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -110,32 +110,6 @@ Make sure you have pnpm installed globally.
 2. Install packages using pnpm
    ```sh
    pnpm install
-   ```
-3. Set up your environment variables:
-
-     Create a .env file in the root directory and add the following variables:
-   ```js
-   # GitHub Authentication Token
-    GITHUB_AUTH_TOKEN=YOUR_GITHUB_AUTH_TOKEN
-
-    # WakaTime API Key
-    WAKATIME_API_KEY=YOUR_WAKATIME_API_KEY
-
-    # Spotify Credentials
-    SPOTIFY_CLIENT_ID=YOUR_SPOTIFY_CLIENT_ID
-    SPOTIFY_CLIENT_SECRET=YOUR_SPOTIFY_CLIENT_SECRET
-    SPOTIFY_REFRESH_TOKEN=YOUR_SPOTIFY_REFRESH_TOKEN
-
-    # Node Environment
-    NODE_ENV=YOUR_NODE_ENV
-
-    # Umami Analytics
-    NEXT_PUBLIC_UMAMI_WEBSITE_ID=YOUR_UMAMI_WEBSITE_ID
-    NEXT_PUBLIC_UMAMI_URL=YOUR_UMAMI_URL
-
-    # Blob Read/Write Token
-    BLOB_READ_WRITE_TOKEN=YOUR_BLOB_READ_WRITE_TOKEN
-
    ```
 4. Start the development server:
    ```sh
