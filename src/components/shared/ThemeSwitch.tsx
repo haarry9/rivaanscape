@@ -13,7 +13,7 @@ export default function ThemeSwitch() {
   }, [])
 
   if (!mounted) {
-    return <div className="size-11"></div>
+    return <div className="size-8"></div>
   }
 
   function switchTheme() {
@@ -34,10 +34,14 @@ export default function ThemeSwitch() {
         aria-label="Switch theme"
         type="button"
         onClick={onThemeChange}
-        className="ml-1 flex size-10 flex-col items-center justify-center overflow-hidden rounded-md font-medium duration-200 ease-in-out"
+        className="flex size-8 items-center justify-center rounded-full bg-muted/50 transition-colors duration-200 ease-in-out hover:bg-muted md:size-9"
       >
-        {resolvedTheme === 'light' && <Moon size={15} />}
-        {resolvedTheme === 'dark' && <Sun size={15} />}
+        {resolvedTheme === 'light' && (
+          <Moon size={14} className="text-foreground/70" />
+        )}
+        {resolvedTheme === 'dark' && (
+          <Sun size={14} className="text-foreground/70" />
+        )}
       </button>
     </div>
   )

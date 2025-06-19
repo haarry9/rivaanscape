@@ -8,11 +8,7 @@ function getLatestCommit() {
   return label
 }
 
-async function Footer({
-  footerWidth = 'max-w-[75vw]',
-}: {
-  footerWidth?: string
-}) {
+function Footer({ footerWidth = 'max-w-[75vw]' }: { footerWidth?: string }) {
   const commit = getLatestCommit()
   const year = String(new Date().getFullYear())
 
