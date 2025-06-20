@@ -21,7 +21,7 @@ const socials = [
   {
     name: 'LinkedIn',
     icon: Linkedin,
-    link: 'https://www.linkedin.com/in/rohit-singh-rawat-8b4170256/',
+    link: 'https://www.linkedin.com/in/harishankarpv',
     translateX: '12px',
     rotate: '-10deg',
     zIndex: 1,
@@ -29,7 +29,7 @@ const socials = [
   {
     name: 'Twitter',
     icon: Twitter,
-    link: 'https://x.com/Spacing_Whale',
+    link: 'https://x.com/hspv_',
     translateX: '4px',
     rotate: '-3deg',
     zIndex: 3,
@@ -37,7 +37,7 @@ const socials = [
   {
     name: 'PeerList',
     icon: PeerList,
-    link: 'https://peerlist.io/spacingwhale ',
+    link: 'https://peerlist.io/hspv',
     translateX: '-4px',
     rotate: '3deg',
     zIndex: 2,

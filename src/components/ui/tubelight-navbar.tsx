@@ -55,31 +55,9 @@ export function NavBar({ className }: NavBarProps) {
           <Link
             href="/"
             onClick={() => setActiveTab('Home')}
-            className={cn(
-              'relative cursor-pointer rounded-full px-3 py-1.5 text-sm font-semibold transition-colors md:px-4 md:py-2',
-              'text-foreground/80 hover:text-primary',
-              pathname === '/' && 'bg-muted text-primary'
-            )}
+            className="flex items-center gap-2 text-foreground/80 opacity-70 transition-opacity hover:opacity-100"
           >
-            <Logo className="h-4 w-7 dark:invert md:h-5 md:w-8" />
-            {pathname === '/' && (
-              <motion.div
-                layoutId="lamp"
-                className="absolute inset-0 -z-10 w-full rounded-full bg-primary/5"
-                initial={false}
-                transition={{
-                  type: 'spring',
-                  stiffness: 300,
-                  damping: 30,
-                }}
-              >
-                <div className="absolute -top-1.5 left-1/2 h-0.5 w-6 -translate-x-1/2 rounded-t-full bg-primary md:-top-2 md:h-1 md:w-8">
-                  <div className="absolute -left-1.5 -top-1.5 h-4 w-9 rounded-full bg-primary/20 blur-sm md:-left-2 md:-top-2 md:h-6 md:w-12 md:blur-md" />
-                  <div className="absolute -top-0.5 h-4 w-6 rounded-full bg-primary/20 blur-sm md:-top-1 md:h-6 md:w-8 md:blur-md" />
-                  <div className="absolute left-1.5 top-0 size-3 rounded-full bg-primary/20 blur-sm md:left-2 md:size-4" />
-                </div>
-              </motion.div>
-            )}
+            <Logo className="h-10 w-20 dark:invert md:h-14 md:w-28" />
           </Link>
 
           {/* Navigation items in the center */}

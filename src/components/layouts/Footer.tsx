@@ -1,15 +1,10 @@
 import { cn } from '@/lib/utils'
 import { Github } from '../Icons/StackIcons/github'
+import { Linkedin } from '../Icons/socials/Linkedin'
+import { Twitter } from '../Icons/socials/Twitter'
 import { Separator } from '../ui/separator'
 
-function getLatestCommit() {
-  const sha = process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA
-  const label = sha ? sha.slice(0, 7) : '🌍'
-  return label
-}
-
 function Footer({ footerWidth = 'max-w-[75vw]' }: { footerWidth?: string }) {
-  const commit = getLatestCommit()
   const year = String(new Date().getFullYear())
 
   return (
@@ -25,22 +20,35 @@ function Footer({ footerWidth = 'max-w-[75vw]' }: { footerWidth?: string }) {
           {year}{' '}
         </time>{' '}
         ©<p>Harishankar P V</p>
-        <a
-          className="link ml-auto inline-flex items-center gap-1.5"
-          href="https://github.com/Rohit-Singh-Rawat/Space"
-          rel="noreferrer"
-          target="_blank"
-        >
-          <Github className="size-5 dark:invert" />
-          <span>
-            <span className="bg-gradient-to-l from-gray-600 to-gray-300 bg-clip-text text-transparent">
-              Space
-            </span>
-            <span className="text-gray-350 dark:text-gray-450 hidden underline decoration-2 underline-offset-2 sm:inline">
-              #{commit}
-            </span>
-          </span>
-        </a>
+        <div className="ml-auto flex items-center gap-3">
+          <a
+            className="inline-flex items-center gap-1.5 transition-colors hover:text-gray-600 dark:hover:text-gray-300"
+            href="https://www.linkedin.com/in/harishankarpv"
+            rel="noreferrer"
+            target="_blank"
+            aria-label="LinkedIn"
+          >
+            <Linkedin className="size-5" />
+          </a>
+          <a
+            className="inline-flex items-center gap-1.5 transition-colors hover:text-gray-600 dark:hover:text-gray-300"
+            href="https://x.com/hspv_"
+            rel="noreferrer"
+            target="_blank"
+            aria-label="Twitter"
+          >
+            <Twitter className="size-5" />
+          </a>
+          <a
+            className="inline-flex items-center gap-1.5 transition-colors hover:text-gray-600 dark:hover:text-gray-300"
+            href="https://github.com/haarry9"
+            rel="noreferrer"
+            target="_blank"
+            aria-label="GitHub"
+          >
+            <Github className="size-5 dark:invert" />
+          </a>
+        </div>
       </div>
     </footer>
   )

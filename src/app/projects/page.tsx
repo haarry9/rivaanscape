@@ -18,7 +18,7 @@ const page = () => {
           Projects
         </h1>
         <h2 className="mt-3 text-center font-neu text-gray-400">
-          Projects I&apos;ve crafted.
+          My latest innovative project.
         </h2>
         <svg
           width="400"
@@ -61,7 +61,6 @@ const page = () => {
               key={index}
               delay={index * 0.2}
               imageSrc={project.imageSrc}
-              videoSrc={project.videoSrc}
               title={project.title}
               tags={project.tags}
               timeline={project.timeline}

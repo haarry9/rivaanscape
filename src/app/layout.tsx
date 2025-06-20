@@ -8,7 +8,7 @@ import { Analytics } from '@/components/shared/Analytics'
 
 const info = {
   name: 'Harishankar P V',
-  twitter: '@Spacing_Whale',
+  twitter: '@hspv_',
   description:
     'Full-Stack Developer, Next.js Buff, Freelancer, Always Evolving. Crafting web apps to ignite ideas.',
   url: 'https://rohitsinghrawat.tech',

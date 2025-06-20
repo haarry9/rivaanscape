@@ -4,29 +4,31 @@ export const Intro = () => {
   return (
     <section className="mt-8 text-zinc-600 dark:text-zinc-400">
       <div className="space-y-5 text-left">
+        <p>👋 Hi there! I&apos;m Harishankar P V, an AI Engineer from India.</p>
         <p>
-          👋 Hi there! I&apos;m Harishankar P V, an AI Engineer from India, who
-          loves{' '}
           <span className="bg-gradient-to-l from-purple-400 to-yellow-400 bg-clip-text text-transparent">
-            building and shipping AI products!
+            tl;dr: building and shipping AI products!
           </span>{' '}
         </p>
 
         <p>
-          As you know when it comes to building AI products, you need Engineers!
-          I can manage the entire AI development process, be it integrating
-          frontend and backend with AI APIs, RAGs or AI Agents and the part that
-          excites me the most about AI Engineering is working with tools like
-          CursorAI and seeing the vision of the product come alive.
+          When it comes to building AI products, you need Engineers---and
+          that&apos;s where I come in. Whether it&apos;s integrating frontends
+          and backends with AI APIs, or designing Retrieval-Augmented Generation
+          (RAG) systems and AI Agents, I love turning ideas into reality.
         </p>
         <p>
+          What excites me most about AI Engineering is working with powerful
+          tools like CursorAI and watching a product&apos;s vision come to life.
           My goal is to create AI-driven solutions that are natural and
-          intuitive, letting the technology work its magic behind the scenes.
+          intuitive, while letting the technology work its magic behind the
+          scenes.
         </p>
         <p>
-          I enjoy riding the AI wave and exploring new technologies to enhance
-          my skills 🚀
+          I&apos;m always diving into new tools and tech to sharpen my skills
+          and stay on the cutting edge of AI.
         </p>
+        <p>Ready to build something amazing together? 🚀</p>
 
         {/* <p>
           I enjoy browsing the web and crafting components. You can find my{' '}
@@ -53,12 +55,12 @@ export const Intro = () => {
         <p>
           Find me on twitter at{' '}
           <Link
-            href={'https://x.com/rivaanscape'}
+            href={'https://x.com/hspv_'}
             className="wavvy underline-offset-2"
           >
             x.com
           </Link>{' '}
-          or drop a{' '}
+          or drop an{' '}
           <Link
             href={'mailto:hspv99@gmail.com'}
             className="wavvy underline-offset-2"

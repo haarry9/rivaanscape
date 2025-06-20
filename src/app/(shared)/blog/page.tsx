@@ -28,10 +28,7 @@ const Blog = () => {
       </p>
       <p>
         Stay updated on my learning journey—follow me on{' '}
-        <Link
-          href={'https://x.com/Spacing_Whale'}
-          className="wavvy underline-offset-2"
-        >
+        <Link href={'https://x.com/hspv_'} className="wavvy underline-offset-2">
           x.com
         </Link>{' '}
         for insights and updates!

@@ -19,18 +19,17 @@ const FeaturedProjects = () => {
 
         <BlurFade delay={0.4}>
           <p className="mx-auto max-w-2xl text-center text-sm text-gray-600 dark:text-gray-300 md:text-base">
-            I&apos;ve worked on a variety of projects, from simple websites to
-            complex web applications. Here are a few of my favorites.
+            I&apos;ve worked on a variety of projects, from simple AI apps to
+            enterprise AI products. Here are a few of my favorites.
           </p>
         </BlurFade>
       </div>
 
-      <div className="grid gap-8 md:grid-cols-2">
+      <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-2">
         {featuredProjects.map((project, index) => (
           <BlurFade key={project.title} delay={0.5 + index * 0.1}>
             <FeaturedProjectCard
               imageSrc={project.imageSrc}
-              videoSrc={project.videoSrc}
               title={project.title}
               tags={project.tags}
               timeline={project.timeline}

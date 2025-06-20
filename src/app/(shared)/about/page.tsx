@@ -1,8 +1,6 @@
 import PolaroidPhoto from '@/components/About/PolaroidPhoto'
 
-import p1 from '@/../../public/images/photo1.jpg'
-import p2 from '@/../../public/images/photo2.jpg'
-import p3 from '@/../../public/images/photo3.jpg'
+import hari from '@/../../public/images/hari.jpg'
 import { SpacingWhale } from '@/components/Home/SpacingWhle'
 import Logo from '@/components/Icons/Logo'
 import CdBack from '@/components/shared/CdBack'
@@ -24,22 +22,22 @@ const page = () => {
       </div>
       <div className="flex flex-wrap items-center justify-center gap-5 py-20 md:gap-20">
         <PolaroidPhoto
-          altText="image"
-          imageSrc={p1}
+          altText="Hari's photo"
+          imageSrc={hari}
           rotation={-7}
-          text="My First Capture"
+          text="Professional"
         />
         <PolaroidPhoto
-          altText="image"
-          imageSrc={p2}
+          altText="Hari's photo"
+          imageSrc={hari}
           rotation={5}
-          text="Solitary Wanderer"
+          text="Creative Mind"
         />
         <PolaroidPhoto
-          altText="image"
-          imageSrc={p3}
+          altText="Hari's photo"
+          imageSrc={hari}
           rotation={2}
-          text="Peace"
+          text="AI Engineer"
         />
       </div>
       <div className="group space-y-5 leading-relaxed">
